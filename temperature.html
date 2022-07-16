@@ -1,0 +1,87 @@
+ <h1 align="center"> <font color="purple"> Mini Project On Temperature Converter</font> </h1>
+
+<!DOCTYPE html>
+<html>
+<body style="background-color: powderblue;">
+  
+<center>
+  <marquee  behavior="alternate" direction="left">          
+    <img src=
+    "C:\Users\yuvat\OneDrive\Desktop\temperature\teja 1.jpeg " ,width = "600" height="400"
+    alt="temperature1 logo"> 
+  </marquee>
+<style>
+
+    #convert {
+    background-color:greenyellow;
+  }
+  #convert:hover {
+    background-color: coral;
+  }
+  #clear {
+    background-color: pink;
+  }
+  #clear:hover {
+    background-color: yellow;
+  }
+  h1 {
+    font-family: sans-serif;
+    color: blueviolet;
+  }
+  input {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 2em;
+    color: #f4a55a;
+    font-family: cursive, sans-serif;
+  }
+  ::-webkit-input-placeholder {
+     color: blue;
+  }
+  button {
+    padding: 10px;
+    font-size: 1.2em
+    color: red;
+  }
+</style>
+<input type="text" id="fahrenheit" 
+placeholder="Fahrenheit" name="f" value="" />
+
+<input type="text" id="celsius" placeholder="Celsius" 
+name="c" value="" />
+
+<button id="convert">Convert data</button>
+<button id="clear">clear data</button>
+<script>
+    document.getElementById('convert').onclick = tempConvert;
+document.getElementById('clear').onclick = clearForm;
+
+function tempConvert() {
+    
+    var fahrenheit = document.getElementById("fahrenheit").value;
+    var celsius = document.getElementById("celsius").value;
+  
+  if (fahrenheit != '') {
+        celsius = (parseFloat(fahrenheit) - 32) / 1.8;
+    } else {
+        fahrenheit = (parseFloat(celsius) * 1.8) + 32;
+    }
+    document.getElementById('fahrenheit').value = parseFloat(fahrenheit).toFixed(1);
+    document.getElementById('celsius').value = parseFloat(celsius).toFixed(1);
+}
+
+function clearForm() {
+    document.getElementById('fahrenheit').value = '';
+    document.getElementById('celsius').value = '';
+} 
+</script>
+<marquee  behavior="alternate" direction="right">         
+  <img src= 
+  "C:\Users\yuvat\OneDrive\Desktop\temperature\teja.jpg",width = "600" height="400"
+  alt="ztemperature logo"> 
+</marquee>  
+</center>
+
+</body>
+</html>
